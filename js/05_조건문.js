@@ -74,12 +74,12 @@ function ageCheck(){
   alert(`${Age}은/는 ${result}`)
 }
 
-//한줄 코드
+//한줄 코드 (조건문) ? (true 값) : (false 값)
+//백준 풀때 진짜 많이 나오는 형식
 function ageChectTest() {
   const age = Number(document.getElementById("inputAge").value);
   return alert(`${age < 0 && age > 120 ? "잘못 입력함" : age > 19 ? "성인" : age > 13 ? "청소년" : "어린이"}`);
 }
-/* age < 0 && age > 120 ? "잘못 입력함" : age > 19 ? "성인" : age > 13 ? "청소년" : "어린이" */
 
 function ageCheck2(){
   const inputAge = document.getElementById("inputAge");
