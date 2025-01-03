@@ -8,3 +8,7 @@ pre > code{
   margin: 20px;
   display: block;   
 }
+
+#inputAge{
+  width: 30px;
+}
