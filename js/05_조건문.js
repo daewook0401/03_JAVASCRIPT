@@ -73,3 +73,26 @@ function ageCheck(){
 
   alert(`${Age}은/는 ${result}`)
 }
+
+//한줄 코드
+function ageChectTest() {
+  const age = Number(document.getElementById("inputAge").value);
+  return alert(`${age < 0 && age > 120 ? "잘못 입력함" : age > 19 ? "성인" : age > 13 ? "청소년" : "어린이"}`);
+}
+/* age < 0 && age > 120 ? "잘못 입력함" : age > 19 ? "성인" : age > 13 ? "청소년" : "어린이" */
+
+function ageCheck2(){
+  const inputAge = document.getElementById("inputAge");
+  const Age = Number(inputAge.value);
+  let result;
+  if (Age<0 || Age>120){
+    result = "잘못입력";
+  } else if (Age > 19){
+    result = "성인"
+  } else if (Age > 13){
+    result = "청소년"
+  } else {
+    result = "어린이"
+  }
+  alert(`${Age}은/는 ${result}`)
+}
