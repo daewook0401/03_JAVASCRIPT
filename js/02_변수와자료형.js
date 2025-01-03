@@ -207,6 +207,6 @@ function typeCheck(){
     return a+b;
   }
   console.log("sumFn : ", sumFn, typeof sumFn);
-
+  
   console.log(sumFn(111,987));
 }
