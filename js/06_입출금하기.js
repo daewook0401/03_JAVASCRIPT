@@ -56,6 +56,7 @@ function deposit(){
   }
   balance+=Num;
   output.innerText=balance;
+  amount.value="";
 }
 
 /**출금 */
@@ -75,5 +76,6 @@ function withdrawal(){
   }
   balance-=Num;
   output.innerText=balance;
+  amount.value="";
   alert(`${Num}원이 출금 되었습니다. 남은 잔액 : ${balance}원`)
 }
