@@ -18,27 +18,45 @@ function createTable(){
     alert("1 이상의 수만만 입력 해주세요");
     return;
   }
-  if (startNum>endNum){
-    alert("시작단이 종료 단 보다 클 수 없습니다.");
-    return;
-  }
+    thead.innerHTML = createThead(startNum,endNum);
+    tbody.innerHTML = createTbody(startNum,endNum);
+}
 
-  //thead 생성
+function createThead(startNum, endNum){
+  
   let theadResult = `<tr>`;
-  for(let n=startNum;n<=endNum;n++){
+  if (startNum>endNum){
+    for(let n=startNum;n>=endNum;n--){
     theadResult+=`<th>${n}단</th>`;
+    } 
   }
-  theadResult+=`</tr>`;
-  thead.innerHTML = theadResult;
-
-  //tbody 생성
-  let tbodyResult = `<tr>`;
-  for(let n2=1;n2<=9;n2++){
-    for(let n1=startNum; n1<=endNum; n1++){
-      tbodyResult+=`<td>${n1} x ${n2} = ${n1 * n2}</td>`;
+  else{
+    for(let n=startNum;n<=endNum;n++){
+      theadResult+=`<th>${n}단</th>`;
     }
-    tbodyResult+=`</tr>`
   }
-  tbody.innerHTML = tbodyResult;
-    
+
+  theadResult+=`</tr>`;
+  return theadResult;
+}
+
+function createTbody(startNum, endNum){
+  let tbodyResult = `<tr>`;
+  if (startNum>endNum){
+    for(let n2=1;n2<=9;n2++){
+      for(let n1=startNum; n1>=endNum; n1--){
+        tbodyResult+=`<td>${n1} x ${n2} = ${n1 * n2}</td>`;
+      }
+      tbodyResult+=`</tr>`
+    }
+  }
+  else{
+    for(let n2=1;n2<=9;n2++){
+      for(let n1=startNum; n1<=endNum; n1++){
+        tbodyResult+=`<td>${n1} x ${n2} = ${n1 * n2}</td>`;
+      }
+      tbodyResult+=`</tr>`
+    }
+  }
+  return tbodyResult;
 }
