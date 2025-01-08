@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 Calendar</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #000;
+      text-align: center;
+      padding: 10px;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>2025 Calendar Generator</h1>
+  </header>
+  <main>
+    <label for="month">Month (1-12): </label>
+    <input type="number" id="month" min="1" max="12" value="1">
+    <button onclick="generateCalendar()">Generate</button>
+
+    <table id="calendar">
+      <thead id="calendar-head">
+        <!-- Days of the week -->
+      </thead>
+      <tbody id="calendar-body">
+        <!-- Dates will be generated here -->
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    function generateCalendar() {
+      const monthInput = document.getElementById("month");
+      const month = Number(monthInput.value);
+      const year = 2025; // Fixed year
+
+      if (month < 1 || month > 12) {
+        alert("Please enter a valid month between 1 and 12.");
+        return;
+      }
+
+      const calendarHead = document.getElementById("calendar-head");
+      const calendarBody = document.getElementById("calendar-body");
+
+      calendarHead.innerHTML = "";
+      calendarBody.innerHTML = "";
+
+      const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+      // Generate header row with days of the week
+      let headRow = "<tr>";
+      for (const day of daysOfWeek) {
+        headRow += `<th>${day}</th>`;
+      }
+      headRow += "</tr>";
+      calendarHead.innerHTML = headRow;
+
+      // Calculate the first day and the number of days in the month
+      const firstDay = new Date(year, month - 1, 1).getDay();
+      const daysInMonth = new Date(year, month, 0).getDate();
+
+      let currentDay = 1;
+      let rows = "";
+
+      for (let i = 0; currentDay <= daysInMonth; i++) {
+        let row = "<tr>";
+
+        for (let j = 0; j < 7; j++) {
+          if (i === 0 && j < firstDay) {
+            row += "<td></td>"; // Empty cells before the first day
+          } else if (currentDay > daysInMonth) {
+            row += "<td></td>"; // Empty cells after the last day
+          } else {
+            row += `<td>${currentDay}</td>`;
+            currentDay++;
+          }
+        }
+
+        row += "</tr>";
+        rows += row;
+      }
+
+      calendarBody.innerHTML = rows;
+    }
+  </script>
+</body>
+</html>
