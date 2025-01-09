@@ -112,3 +112,38 @@ test1.addEventListener("click", function(){
   // #test1에 num을 1 증가 시킨 값을 대입
   test1.innerText = ++num;
 });
+
+const btnContainer = document.querySelectorAll(".btn-container > button");
+const result2 = document.querySelector("#result2");
+for(let i = 0; i <btnContainer.length; i++){
+  btnContainer[i].style.backgroundColor = btnContainer[i].value;
+  btnContainer[i].addEventListener("click", function(){
+    result2.style.backgroundColor = this.value;
+  });
+}
+
+
+// 실습 문제
+// 변경하기 버튼 클릭시 input 요소에 작성된 색상 값을 읽어 얻어와 바로 위 .display 요소의 배경색으로 변경하기
+
+const boxs = document.querySelectorAll(".box");
+document.querySelector("#changeBtn").addEventListener("click", function(){
+  for(let i = 0; i < boxs.length; i++){
+    boxs[i].querySelector(".display").style.backgroundColor = boxs[i].querySelector(".inputColor").value;
+    /* 
+    rgb() 값으로 받기
+    boxs[i].querySelector(".display").style.backgroundColor = `rgb(${boxs[i].querySelector(".inputColor").value})`;
+    */
+   }
+});
+
+/* 
+const changeBtn = document.querySelector("#changeBtn");
+const inputColors = document.querySelectorAll(".inputColor");
+const displays = document.querySelectorAll(".display");  
+changeBtn.addEventListener("click", function(){
+  for(let i = 0; i < inputColors.length; i++){
+    displays[i].style.backgroundColor = inputColors[i].value;
+  }
+});
+ */
