@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column; /* 요소들을 수직으로 배치 */
+  justify-content: center;
+  align-items: center;
+}
+.select-name{
+  font-weight: bold;
+}
+.container {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-container {
+  display: flex;
+  align-self: flex-start;
+}
+
+footer{
+  margin-top:50px;
+  display: flex;
+  flex-direction: column; /* 요소들을 수직으로 배치 */
+  justify-content: center;
+  align-items: center;
+}
+
+#display{
+
+}

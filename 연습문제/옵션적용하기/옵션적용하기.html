@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>옵션적용하기</title>
+  <link rel="stylesheet" href="옵션적용하기.css">
+</head>
+<body>
+  <main>
+    <div class="base-container">
+      <div class="container">
+        <div class="column">
+            <div class="select-name">너비 : <input type="number" id="boxWidth"> px </div>
+            <div class="select-name">글자크기 : <input type="number" id="fontSize"> px</div>
+        </div>
+        <div class="column">
+            <div class="select-name">높이 : <input type="number" id="boxHeight"> px</div>
+            <div class="row-container">
+              <div class="select-name"> 굵기 : </div>
+              <div>보통<input type="radio" name="fontWeight"></div>
+              <div>굵게 <input type="radio" name="fontWeight"></div>
+            </div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div>글자색 :</div>
+        <div><input type="text" id="textColor"></div>
+        <div>배경색 :</div>
+        <div><input type="text" id="color"></div>
+      </div>
+      <div class="row-container">
+        <div>가로정렬 :</div>
+        <div>왼쪽 <input type="radio" name="textAlign"></div>
+        <div>가운데 <input type="radio" name="textAlign"></div>
+        <div>오른쪽 <input type="radio" name="textAlign"></div>
+      </div>
+      <div class="row-container">
+        <div>세로정렬</div>
+        <div>위 <input type="radio" name="verticalAlign"></div>
+        <div>가운데 <input type="radio" name="verticalAlign"></div>
+        <div>아래 <input type="radio" name="verticalAlign"></div>
+      </div>
+      <div class="row-container">
+        <div>출력 문자열</div>
+        <input type="text" id="text">
+      </div>
+    </div>
+    <button id="col">적용하기</button>
+  </main>
+
+  <footer>
+    <div id="display">그림올 곳</div>
+  </footer>
+
+
+
+  <script src="옵션적용하기.js"></script>
+</body>
+</html>
