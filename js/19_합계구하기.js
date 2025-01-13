@@ -13,7 +13,7 @@ clac.addEventListener("click", () => {
   alert(`합계 : ${sum}`);
 });
 
-const addBtn = document.querySelector("#add");
+const addBtn = document.querySelector("#.add");
 const container = document.querySelector(".container");
 addBtn.addEventListener("click",()=>{
   
