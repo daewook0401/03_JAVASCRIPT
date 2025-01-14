@@ -2,24 +2,14 @@ const countBtn = document.querySelector("#btn");
 const result = document.querySelector("#result");
 
 countBtn.addEventListener("click", () =>{
-  result.innerHTML = "";
+  var str = '';
   let resultSum = 0;
-  const fruit = document.querySelectorAll(".fruit");
+  const fruit = document.querySelectorAll(".fruit:checked");
   for(let check of fruit){
-    if (!check.checked){
-      continue;
-    }
     const parent = check.parentElement;
-    const label = document.createElement("label");
-    const span1 = document.createElement("span");
-    span1.innerHTML = parent.children[1].innerHTML + " ";
-    const span2 = document.createElement("span");
-    span2.innerHTML = parent.children[3].value + "개 ";
-    label.append(span1);
-    label.append(span2);
-    result.append(label);
+    str += `${parent.children[1].innerHTML} ${parent.children[3].value}개 `;
     const won = parent.children[2].innerHTML * parent.children[3].value;
     resultSum += won;
   }
-  result.append(` 총합 ${resultSum}원`)
+  result.innerHTML = `${str} 총합 ${resultSum}원`;
 })
