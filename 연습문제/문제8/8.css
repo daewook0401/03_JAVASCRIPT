@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  margin : 20px 0px 20px 5px;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+}
+
+.create-container{
+  width: 50%;
+  height: 40%;
+  margin : 40px 40px;
+}
+.margin-1{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.create-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-1 > input{
+  margin-top: 5px;
+  width: 100%;
+  height: 30px;
+}
+
+#colect{
+  width: 45px;
+  height: 28px;
+  margin-top: 10px;
+
+  
+}
+#user-delete{
+  margin-top: 20px;
+  width: 100px;
+  height: 35px;
+}
+.colors{
+  background-color: #00ab00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 15px;
+  
+  color: white;
+
+  cursor: pointer;
+}
+table{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  
+}
+thead{
+  
+  background-color: #f2f2f2;
+  border-right: 1px solid #e0e0e0;
+}
+
+tr{
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+
+}
+
+th, td{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+}
+tr > th:nth-child(1){
+  width: 14%;
+}
+tr > th:nth-child(2){
+  width: 25%;
+}
+tr > th:nth-child(3){
+  width: 26%;
+}
+tr > th:nth-child(4){
+  width: 35%;
+}
+
+tr > td:nth-child(1){
+  width: 14%;
+}
+tr > td:nth-child(2){
+  width: 25%;
+}
+tr > td:nth-child(3){
+  width: 26%;
+}
+tr > td:nth-child(4){
+  width: 35%;
+}
+tbody{
+  border: 1px solid #e0e0e0;
+}

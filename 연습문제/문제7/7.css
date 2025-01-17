@@ -1,0 +1,31 @@
+.hidden-btn{
+  display:none;
+}
+
+.box{
+  width: 210px;
+  height: 500px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  display:flex;
+  align-items: center;
+}
+
+.lottoNum{
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  
+  cursor: pointer;
+  user-select: none;
+}
+
+.lottoNum-checked{
+  background-color: plum;
+}

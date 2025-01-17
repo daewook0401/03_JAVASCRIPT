@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8번</title>
+  <link rel="stylesheet" href="8.css">
+</head>
+<body>
+  <h1>회원 등록 시스템</h1>
+  <main class="main-container">
+    <div class="create-container">
+      <div class="margin-1">
+        <h2>회원 등록</h2>
+      </div>
+      <div class="margin-1 input-tag">
+        <span>아이디:</span>
+        <input type="text">
+      </div>
+      <div class="margin-1 input-tag">
+        <span>이름:</span>
+        <input type="text">
+      </div>
+      <div class="margin-1 input-tag">
+        <span>전화번호:</span>
+        <input type="text">
+      </div>
+      <div id="colect" class="colors">등록</div>
+    </div>
+    <div class="create-container">
+      <h2>등록된 회원 목록</h2>
+      <div>
+        <div id="user-delete" class="colors">선택 삭제</div>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" id="all-check">
+              </th>
+              <th>
+                아이디
+              </th>
+              <th>
+                이름
+              </th>
+              <th>
+                전화번호
+              </th>
+            </tr>
+          </thead>
+          <tbody id="user-table">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script src="8.js"></script>
+</body>
+</html>
